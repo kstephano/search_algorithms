@@ -5,7 +5,7 @@
  * 
  * @param {Input array} arr 
  * @param {Number to search for} target 
- * @returns true if target is in the given array, false otherwise.
+ * @returns index of target if it is in the given array, false otherwise.
  */
 export function binarySearchRecursive(arr, target) {
     // check if target is out of bounds of the array
@@ -23,7 +23,7 @@ export function binarySearchRecursive(arr, target) {
     }
     // check if target is value in the middle index
     if (target === arr[mIndex]) {
-        return true;
+        return mIndex;
     // check if target is less than value in the middle index    
     } else if (target < arr[mIndex]) {
         // search through 1st half recursively
